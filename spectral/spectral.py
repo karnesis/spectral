@@ -63,8 +63,9 @@ def window(winType, N, alpha=0.01):
     """
 
     # Define the more common z
-    z = (np.arange(0,N,1)/N) * 2.0 * pi
-    N = int(N)
+    z       = (np.arange(0,N,1)/N) * 2.0 * pi
+    N       = int(N)
+    winType = winType.lower() # Be a little more robust on the inputs
 
     # Tukey window
     def tukey(N, alpha):
