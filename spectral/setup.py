@@ -22,8 +22,8 @@ if __name__ == '__main__':
         name=name_mdl,
         version='1.0',
         author='Nick Karnesis',
-        author_email='karnesis@apc.in2p3.fr',
-        url='https://gitlab.in2p3.fr/Nikos/spectral',
+        author_email='karnesis@auth.gr',
+        url='https://github.com/karnesis/spectral.git',
         cmdclass={'install': performInstall},
         py_modules=[name_mdl]
         )
