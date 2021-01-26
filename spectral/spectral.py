@@ -6,7 +6,7 @@ from numpy import cos, pi
 import scipy.signal as sg
 from scipy.stats import chi2, norm
 from scipy.special import gammaincinv
-import math
+import math, copy
 from sys import exit
 import pdb
 
