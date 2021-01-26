@@ -18,3 +18,5 @@ fs = 1.0 # The sampling frequency of the time series is required
 f, S, Se, ENBW, N = lpsd(data, fs, Jdes=200, win='nuttall4b', olap=10,order=0,DOPLOT=True,VERBOSE=False)
 ```
 ![Alt text](example/example.png?raw=true)
+
+Karnesis N 2021
