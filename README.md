@@ -2,8 +2,8 @@
 
 A basic toolbox for performing spectral analyses. It is a translation of parts of the LTPDA Matlab toolbox that was used for the analysis of the ESA LISA Pathfinder mission.
 
-More details about LISA Pathfinder: https://sci.esa.int/web/lisa-pathfinder
-Source to the LTPDA toolbox: https://www.elisascience.org/ltpda/
+* More details about LISA Pathfinder: https://sci.esa.int/web/lisa-pathfinder
+* Source to the LTPDA toolbox: https://www.elisascience.org/ltpda/
 
 The installation is as usual 
 ```python
