@@ -796,7 +796,7 @@ def lpsd(d, fs, Kdes=100, Jdes=300, Lmin=0, flims=None, win='nuttall4b', winalph
         if DOPLOT:
             import matplotlib.pyplot as plt
             import matplotlib as mpl
-            fr, Sp, _ = psd(data, fs, navs=navs, win=win, olap=.50, onesided=False)
+            fr, Sp, _ = psd(data, fs, navs=navs, win=win, olap=.50)
             lbls      = ['psd(data)', 'loglpsd(data)']
             errs      = [np.absolute(lpsddata - (lpsddata-Se[0])), np.absolute((lpsddata + Se[1])-lpsddata)]
             plt.figure()
