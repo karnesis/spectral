@@ -41,13 +41,13 @@ from spectral import psd, welchpsd
 
 data = np.random.normal(0,1, 10000) # just some data
 fs = 1. # a given sampling frequency of the data 
-npoints = 1000
+npoints = 1000 # The number of points to use for each average
 
-f1, S1, _= psd(data, fs, nperseg=npoints, win='bh92', olap=0.5) # use the custom-made function
-f2, S2   = welchpsd(data, fs, npoints, olap=0.5) # use a wrapper of the scipy equivalent
+f1, S1, _ = psd(data, fs, nperseg=npoints, win='bh92', olap=0.5) # use the custom-made function
+f2, S2    = welchpsd(data, fs, npoints, olap=0.5) # use a wrapper of the scipy equivalent
 
-plt.loglog(f1,S1, lw=3,color='royalblue')
-plt.loglog(f2,S2, lw='3',linestyle='--',color='crimson')
+plt.loglog(f1,S1, lw=3, color='royalblue')
+plt.loglog(f2,S2, lw=3, linestyle='--',color='crimson')
 plt.ylabel(r'[$1/\mathrm{Hz}$]')
 plt.xlabel(r'Frequency [$\mathrm{Hz}$]')
 plt.show()
