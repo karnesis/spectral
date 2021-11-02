@@ -31,4 +31,25 @@ Contents, functions:
 - `lpsd(d, fs)`: Power spectrum estimation on logarithmically spaced frequency grid. See [this](https://core.ac.uk/download/pdf/210665861.pdf) paper for details.
 - `lpflogpsd(data, fs)`: Modification of the above used for the analysis of the [LPF](https://link.aps.org/doi/10.1103/PhysRevLett.120.061101) data.
 
-Karnesis N 2021
+NK 2021
+
+## Another example comparing the PSD methods
+
+```python
+import numpy as np
+from spectral import psd, welchpsd
+
+data = np.random.normal(0,1, 10000) # just some data
+fs = 1. # a given sampling frequency of the data 
+npoints = 1000
+
+f1, S1, _= psd(data, fs, nperseg=npoints, win='bh92', olap=0.5) # use the custom-made function
+f2, S2   = welchpsd(data, fs, npoints, olap=0.5) # use a wrapper of the scipy equivalent
+
+plt.loglog(f1,S1, lw=3,color='royalblue')
+plt.loglog(f2,S2, lw='3',linestyle='--',color='crimson')
+plt.ylabel(r'[$1/\mathrm{Hz}$]')
+plt.xlabel(r'Frequency [$\mathrm{Hz}$]')
+plt.show()
+```
+![Alt text](example/example.png?raw=true)
