@@ -52,4 +52,4 @@ plt.ylabel(r'[$1/\mathrm{Hz}$]')
 plt.xlabel(r'Frequency [$\mathrm{Hz}$]')
 plt.show()
 ```
-<img src="example/psds.png" alt="drawing" width="200"/>
+<img src="example/psds.png" alt="drawing" width="500"/>
